@@ -38,6 +38,7 @@ export default function App() {
         className="absolute right-0 top-0 w-[300px] mb-10 p-2 mr-2 mt-4 flex flex-row border-2 justify-between rounded-md"
       >
         <input
+          required
           onChange={(e) => setCity(e.target.value)}
           type="text"
           className=" pl-2 bg-gray-100 border-2 border-gray-200 rounded-md w-[150px]"

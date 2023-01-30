@@ -7,7 +7,8 @@ export default function WeatherCard(props: any) {
         <div className="flex-1">
           <div className="flex justify-center flex-col   text-white text-4xl mt-10">
             <img
-              className="w-[100px] h-[100px]"
+              className="w-[100px] h-[100px] "
+              style={{ marginTop: "-20px" }}
               src={"http:" + props.weather["current"]["condition"]["icon"]}
             />
             <div
@@ -19,7 +20,7 @@ export default function WeatherCard(props: any) {
             </div>
           </div>
         </div>
-        <div className="text-[120px] items-center text-white ml-4">
+        <div className="text-[110px] items-center text-white ml-4">
           {props.weather["current"]["temp_c"]}°C
         </div>
       </div>
