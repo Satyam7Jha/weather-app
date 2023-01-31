@@ -1,4 +1,5 @@
 import React from "react";
+import { MdLocationOn } from "react-icons/md";
 
 export default function CurrentWeather({
   liveLocationWeather,
@@ -9,6 +10,7 @@ export default function CurrentWeather({
   return (
     <div>
       <div className=" bg-[rgba(0,0,0,0.5)]    p-4 m-4 rounded-lg text-white flex flex-row items-center">
+        <MdLocationOn className="text-3xl" />
         <div>
           <img
             className="w-10 h-10"

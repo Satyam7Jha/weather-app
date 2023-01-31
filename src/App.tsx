@@ -4,7 +4,7 @@ import Forcast from "./components/Forcast";
 import WeatherCard from "./components/WeatherCard";
 
 export default function App() {
-  const [city, setCity] = React.useState("Delhi");
+  const [city, setCity] = React.useState("Chennai");
   const [weather, setWeather] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
   const [backgroundImage, setBackgroundImage] = React.useState<string>(
