@@ -1,10 +1,8 @@
 import React from "react";
 
 export default function WeatherCard(props: any) {
- 
-
   return (
-    <div className=" bg-[rgba(0,0,0,0.5)] mt-[180px]   p-10 rounded-lg ">
+    <div className=" bg-[rgba(0,0,0,0.5)] mt-[130px]   p-10 rounded-lg ">
       <div className="flex-row flex ">
         <div className="flex-1">
           <div className="flex justify-center flex-col   text-white text-4xl mt-10">

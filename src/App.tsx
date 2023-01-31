@@ -1,5 +1,6 @@
 import React from "react";
 import CurrentWeather from "./components/CurrentWeather";
+import Forcast from "./components/Forcast";
 import WeatherCard from "./components/WeatherCard";
 
 export default function App() {
@@ -32,7 +33,8 @@ export default function App() {
 
   const fetchData = async (city: string) => {
     const res = await fetch(
-      `https://api.weatherapi.com/v1/current.json?key=eca6c7f85d1d4694847175019210211&q=${city}=no`
+      // `https://api.weatherapi.com/v1/current.json?key=eca6c7f85d1d4694847175019210211&q==no`
+      `http://api.weatherapi.com/v1/forecast.json?key=eca6c7f85d1d4694847175019210211&q=${city}&days=10&aqi=no&alerts=no`
     );
     const data = await res.json();
     setBackgroundImage(getBackGround(data.current.condition.text));
@@ -122,7 +124,10 @@ export default function App() {
       {loading || weather === null ? (
         <div></div>
       ) : (
-        <WeatherCard weather={weather} loading={loading} />
+        <div>
+          <WeatherCard weather={weather} loading={loading} />
+          <Forcast weather={weather} />
+        </div>
       )}
     </div>
   );
